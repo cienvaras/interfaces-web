@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS: Introducción - Desarrollo de Interfaces Web</title>
+</head>
+<body>
+  <header class="page-header">
+    <h2>Desarrollo de Interfaces Web</h2>
+  </header>
+  <nav class="nav-main">
+    <h2 class="nav-title">Navegación</h2>
+    <ul class="menu menu--level1">
+      <li><a href="../index.html">Inicio</a></li>
+      <li>HTML
+        <ul class="menu menu--level2">
+          <li><a href="../html/historia.html">Historia y evolución</a></li>
+          <li><a href="../html/estructura.html">Estructura básica de páginas</a></li>
+          <li><a href="../html/elementos.html">Elementos básicos</a></li>
+          <li><a href="../html/estructura-html5.html">Elementos estructurales de HTML5</a></li>
+        </ul>
+      </li>
+      <li>CSS
+        <ul class="menu menu--level2">
+          <li><a href="introduccion.html">Introducción</a></li>
+          <li><a href="texto.html">Estilos de texto</a></li>
+          <li><a href="box-model.html">Box Model</a></li>
+        </ul>
+      </li>
+      <li><a href="index.html">Ejemplos</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h1>CSS: Introducción</h1>
+    <h2>Historia</h2>
+    <p>CSS (<em>Cascading Style Sheets</em>) es un lenguaje que permite describir la <strong>apariencia</strong>
+      y el <strong>formato</strong> de un documento escrito en un lenguaje de <em>markup</em>, como el HTML.</p>
+    <p>CSS hizo su aparición en 1994. En esa época, los fabricantes de navegadores comenzaron a incorporar
+      elementos de estilo en el HTML para responder a las demandas de los desarrolladores, aumentando su
+      complejidad y dificultando la compatibilidad y estandarización. CSS nace con el objetivo de corregir
+      este proceso, reduciendo la complejidad y mejorando la interoperabilidad.</p>
+    <p>La <strong>primera recomendación</strong> de la W3C fue publicada en <strong>1996</strong>.
+      <strong>CSS 2</strong>, la segunda recomendación hizo su aparición al año siguiente, en
+      <strong>1997</strong>.</p>
+    <p>La adopción de CSS ha sido un proceso lento, con algunos navegadores implementando sus propias
+      reglas y extensiones. En los primeros años de CSS era común el uso incorrecto de HTML para dar estilo
+      a las páginas y la creación de sitios optimizados para un navegador específico, debido a la falta
+      de estandarización</p>
+    <h2>CSS 3</h2>
+    <p>A pesar de esto, el desarrollo de CSS continuó y lentamente el soporte de la mayoría de los navegadores
+    convergió hacia las recomendaciones de la W3C. Los fabricantes han continuado incorporando nueva
+    funcionalidad que ha ido convirtiéndose en CSS 3, la tercera recomendación de la W3C.</p>
+    <p>CSS 3 no está completa, muchas de sus secciones continúan como borrador. Sin embargo, hay un conjunto
+    importante de características soportadas por todos los navegadores modernos que pueden usarse de forma
+    segura en los sitios actuales.</p>
+    <h2>Selectores</h2>
+    <p>Los <strong>selectores</strong> permiten especificar a cual elemento de HTML se aplicará una serie de
+      reglas de estilo específicas. Un selector puede contener nombres de etiquetas HTML, ID, clases u otros elementos,
+      en diversas combinaciones.</p>
+    <p>Los selectores son evaluados en <em>cascada</em>, o sea, de forma secuencial. Si un selector se repite,
+      el último sobreescribirá las reglas aplicadas por el anterior.</p>
+    <p>Por ejemplo, considere el siguiente fragmento de HTML:</p>
+<pre>
+&lt;ul class="lista-compras"&gt;
+  &lt;li&gt;Arroz&lt;/li&gt;
+  &lt;li id="importante"&gt;Tocineta&lt;/li&gt;
+  &lt;li&gt;Jabón para ropa &lt;strong&gt;Rinso&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Leche (&lt;span class="aclaracion"&gt;Descremada&lt;/span&gt;)&lt;/li&gt;
+  &lt;li&gt;Lavaplatos&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+    <p>Si se aplican los siguientes estilos:</p>
+<pre>
+li {
+  color: blue;
+}
+…
+li {
+  color: red;
+}
+</pre>
+    <p>El color final de los ítems de lista será rojo.</p>
+    <p>Pueden usarse nombres de clases y ID como selectores. Para usar una clase, el nombre debe ser
+    precedido por un punto. En el caso de los ID, debe usarse el signo de número (#).</p>
+<pre>
+.lista-compras {
+  font-weight: normal;
+}
+
+#importante {
+  font-weight: bold;
+}
+</pre>
+    <p>En la mayoría de los casos, las reglas aplicadas sobre un elemento son heredadas por los elementos
+      hijos, siempre y cuando no haya una regla más específica aplicada sobre estos.</p>
+    <p>Es posible anidar selectores, para indicar una jerarquía. Por ejemplo la siguiente regla:</p>
+<pre>
+.lista-compras li strong {
+  background-color: yellow;
+}
+</pre>
+    <p>Aplica la regla <code>background-color</code> al elemento <code>strong</code> que está dentro de un
+    <code>li</code> y que a su vez está dentro de un elemento con la clase <code>lista-compras</code>.</p>
+
+    <!-- Agregar algo sobre descendencia directa e indirecta -->
+
+    <h3>Especificidad</h3>
+    <p>Es posible utilizar distintos selectores para referirse a un mismo elemento. En el ejemplo anterior,
+    pueden usarse los siguientes selectores para referirse al segundo ítem de la lista.</p>
+    <ul>
+      <li>
+        <code>li</code>
+      </li>
+      <li>
+        <code>ul li</code>
+      </li>
+      <li>
+        <code>.lista-compras li</code>
+      </li>
+      <li>
+        <code>#importante</code>
+      </li>
+    </ul>
+    <p>Para determinar cúal de los selectores tiene prioridad sobre los otros, existe una medida conocida como
+    <strong>especificidad</strong>. Si dos selectores pueden aplicarse al mismo elemento, la prioridad la tendrá
+    el selector que tenga la mayor especifidad.</p>
+    <p>Para evaluar la especificidad de un selector, debe evaluarse la cantidad de elementos que tenga en cada
+      una de las siguientes categorías, ordenadas de la menor especificidad a la mayor:</p>
+    <ul>
+      <li>Etiquetas HTML y pseudo elementos (ej. <code>:before</code>) <strong>[1x]</strong></li>
+      <li>Clases, selectores de atributo(ej. <code>[type="checkbox"]</code>) y pseudo
+        clases (ej. <code>:hover</code>) <strong>[10x]</strong></li>
+      <li>ID <strong>[100x]</strong></li>
+      <li>Estilos <em>inline</em> <strong>[1000x]</strong></li>.
+    </ul>
+
+    <p>En el caso de los selectores del ejemplo, las especificidades serán las siguientes:</p>
+
+    <ul>
+      <li><code>li</code>: 1 x 1 = <strong>1</strong></li>
+      <li><code>ul li</code>: 2 x 1 = <strong>2</strong></li>
+      <li><code>.lista-compras li</code>: 1 x 1 + 1 x 10 = <strong>11</strong></li>
+      <li><code>#importante</code>: 1 x 100 = <strong>100</strong></li>
+    </ul>
+
+    <p>Por lo tanto, los estilos aplicados usando el selector <code>#importante</code> tendrán la mayor
+      prioridad.</p>
+
+    <p>Ante la duda, puede usarse una <a href="http://specificity.keegan.st/" target="_blank">calculadora de especificidad</a>.</p>
+
+  </main>
+  <footer class="page-footer">
+    <p class="licencia">
+      Esta obra está bajo una
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.es">
+        Licencia Creative Commons Atribución-CompartirIgual 4.0 Internacional
+      </a>.
+    </p>
+  </footer>
+</body>
+</html>
