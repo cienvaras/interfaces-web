@@ -56,16 +56,21 @@ main {
   margin-top: 30px;
 }
 
-article {
-  float: left;
-  width: 72%;
-}
-
 aside {
-  float: right;
-  width: 20%;
   background-color: #eee;
   padding: 2%;
+}
+
+/* Media Queries para Responsive */
+@media (min-width: 768px) {
+  article {
+    float: left;
+    width: 72%;
+  }
+  aside {
+    float: right;
+    width: 20%;
+  }
 }
 
 aside ul {
