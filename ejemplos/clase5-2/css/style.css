@@ -1,0 +1,86 @@
+/* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic);
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  max-width: 960px;
+  margin: 20px auto;
+  font-family: "Open Sans";
+}
+
+.page-header {
+  height: 150px;
+  background-color: #eee;
+  overflow: hidden;
+}
+
+.page-header h2 {
+  margin: 50px 0 0 50px;
+}
+
+.nav-main ul {
+  margin: 5px 0;
+  padding: 0;
+}
+
+.nav-main li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.nav-main a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  padding: 5px 12px;
+}
+
+.nav-main a:hover {
+  background-color: #eee;
+  border-radius: 3px;
+}
+
+main {
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+article {
+  float: left;
+  width: 72%;
+}
+
+aside {
+  float: right;
+  width: 20%;
+  background-color: #eee;
+  padding: 2%;
+}
+
+aside ul {
+  margin: 0;
+  padding: 0;
+}
+
+aside li {
+  list-style-type: none;
+  margin: 0 0 0.5em 0;
+  padding: 0;
+  line-height: 1.3em;
+}
+
+.page-footer {
+  padding: 30px;
+  background-color: #eee;
+}
