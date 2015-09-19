@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplos de posicionamiento</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Ejemplos de posicionamiento</h1>
+  <h2>Flujo normal (position: static)</h2>
+  <div class="container container-static">
+    <div class="box-1"></div>
+    <div class="box-2"></div>
+    <div class="box-3"></div>
+  </div>
+  <h2>Posicionamiento relativo</h2>
+  <div class="container container-relative">
+    <div class="box-1"></div>
+    <div class="box-2"></div>
+    <div class="box-3"></div>
+  </div>
+  <h2>Posicionamiento absoluto</h2>
+  <div class="container container-absolute">
+    <div class="box-1"></div>
+    <div class="box-2"></div>
+    <div class="box-3"></div>
+  </div>
+  <h2>Posicionamiento fijo (fixed)</h2>
+  <p>Position: fixed <strong>siempre</strong> es relativo a la raíz.</p>
+  <div class="container container-fixed">
+    <div class="box-1"></div>
+    <div class="box-2"></div>
+    <div class="box-3"></div>
+  </div>
+  <h2>Float</h2>
+  <h3>Float: left</h3>
+  <div class="container container-float-left-1">
+    <div class="box-1"></div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor
+      id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies
+      vehicula ut id elit. Duis mollis, est non commodo luctus, nisi erat
+      porttitor ligula, eget lacinia odio sem nec elit. Maecenas sed diam eget
+      risus varius blandit sit amet non magna. Donec sed odio dui. Aenean eu leo
+      quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur
+      blandit tempus porttitor. Etiam porta sem malesuada magna mollis euismod.
+      Donec ullamcorper nulla non metus auctor fringilla. Lorem ipsum dolor sit
+      amet, consectetur adipiscing elit.</p>
+  </div>
+  <div class="container container-float-left-2">
+    <div class="box-1"></div>
+    <div class="box-2"></div>
+    <div class="box-3"></div>
+  </div>
+  <h3>Float: right</h3>
+  <div class="container container-float-right">
+    <div class="box-1"></div>
+    <div class="box-2"></div>
+    <div class="box-3"></div>
+  </div>
+  <h3>Clear</h3>
+  <p>Sin clear:</p>
+  <div class="container container-float-clear">
+    <div class="box-1"></div>
+    <div class="box-2"></div>
+    <div class="box-3">Etiam porta sem malesuada magna mollis euismod. Duis
+      mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
+      odio sem nec elit. Curabitur blandit tempus porttitor. Vestibulum id
+      ligula porta felis euismod semper. Maecenas faucibus mollis interdum.
+      Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis
+      interdum. Donec id elit non mi porta gravida at eget metus. Curabitur
+      blandit tempus porttitor. Aenean eu leo quam. Pellentesque ornare sem
+      lacinia quam venenatis vestibulum.</div>
+  </div>
+  <p>Con clear</p>
+  <div class="container container-float-clear">
+    <div class="box-1"></div>
+    <div class="box-2"></div>
+    <div class="box-3 clear">Etiam porta sem malesuada magna mollis euismod. Duis
+      mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
+      odio sem nec elit. Curabitur blandit tempus porttitor. Vestibulum id
+      ligula porta felis euismod semper. Maecenas faucibus mollis interdum.
+      Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis
+      interdum. Donec id elit non mi porta gravida at eget metus. Curabitur
+      blandit tempus porttitor. Aenean eu leo quam. Pellentesque ornare sem
+      lacinia quam venenatis vestibulum.</div>
+  </div>
+  <h3>¿Cómo evitar que el contenedor colapse?</h3>
+  <p>Dos opciones:</p>
+  <pre>.container {
+  overflow: hidden;
+}</pre>
+<p>O con el hack de clearfix:</p>
+<pre>.clearfix:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}</pre>
+<p>O esta opción más corta para IE &ge; 8:</p>
+<pre>.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}</pre>
+</body>
+</html>
