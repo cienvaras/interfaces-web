@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo Formularios</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <h1>Ejemplo Formularios</h1>
+  <form action="#">
+    <div class="form-item form-item-text">
+      <label for="form-nombre">Nombre:</label>
+      <input type="text" id="form-nombre" name="form-nombre" placeholder="Su nombre" required>
+    </div>
+    <div class="form-item form-item-text">
+      <label for="form-correoe">Correo electrónico:</label>
+      <input type="email" id="form-nombre" name="form-nombre" placeholder="Su nombre">
+    </div>
+    <div class="form-item form-item-radio">
+      <h3>Sexo:</h3>
+      <p>
+        <input type="radio" id="form-sexo-fem" name="form-sexo"> <label for="form-sexo-fem">Femenino</label>
+      </p>
+      <p>
+        <input type="radio" id="form-sexo-masc" name="form-sexo"> <label for="form-sexo-masc">Masculino</label>
+      </p>
+    </div>
+    <div class="form-item form-item-select">
+      <label for="form-provincia">Provincia:</label>
+      <select name="form-provincia" id="form-provincia">
+        <option value="na">Seleccione una opción…</option>
+        <option value="sj">San José</option>
+        <option value="al">Alajuela</option>
+        <option value="ca">Cartago</option>
+        <option value="he">Heredia</option>
+        <option value="pu">Puntarenas</option>
+        <option value="li">Limón</option>
+      </select>
+    </div>
+    <div class="form-item form-item-textarea">
+      <label for="form-bio">Biografía:</label>
+      <textarea name="form-bio" id="form-bio" cols="30" rows="10"></textarea>
+    </div>
+    <div class="form-item form-item-checkbox">
+      <h3>Idiomas:</h3>
+      <input type="checkbox" id="form-idiomas-es" name="form-idiomas"> <label for="form-idiomas-es">Español</label>
+      <input type="checkbox" id="form-idiomas-en" name="form-idiomas"> <label for="form-idiomas-en">Inglés</label>
+      <input type="checkbox" id="form-idiomas-fr" name="form-idiomas"> <label for="form-idiomas-fr">Francés</label>
+      <input type="checkbox" id="form-idiomas-it" name="form-idiomas"> <label for="form-idiomas-it">Italiano</label>
+      <input type="checkbox" id="form-idiomas-ge" name="form-idiomas"> <label for="form-idiomas-ge">Alemán</label>
+    </div>
+    <div class="form-submit">
+      <input type="submit" value="Enviar">
+    </div>
+  </form>
+</body>
+</html>

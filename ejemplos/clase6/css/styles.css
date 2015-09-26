@@ -1,0 +1,59 @@
+/* Google fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic);
+
+body {
+  max-width: 960px;
+  margin: 20px auto;
+  font-family: 'Open Sans';
+  font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+
+.form-item {
+  margin-bottom: 2em;
+}
+
+label, h3 {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+label {
+  vertical-align: top;
+  margin-right: 1em;
+}
+
+.form-item-radio label, .form-item-checkbox label {
+  font-weight: 400;
+}
+
+.form-item-textarea label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+textarea {
+  width: 100%;
+}
+
+input {
+  font-size: 14px;
+}
+
+input[type="text"], input[type="email"] {
+  padding: 3px;
+  color: #333;
+}
+
+input[type="submit"] {
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  background-color: #ccc;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
